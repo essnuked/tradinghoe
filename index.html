@@ -212,6 +212,8 @@
   .article-page {
     display: none;
     padding: 40px 0 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .article-page.active { display: block; animation: fadeIn 0.3s ease; }
@@ -485,6 +487,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .thesis-sig .sig-name {
@@ -1281,11 +1285,7 @@
 
   </div>
 
-  </div>
-
   <!-- ════════ ARTICLE PAGES ════════ -->
-
-  </div>
 
   <div class="article-page" id="article-vvv">
     <a class="back-link" onclick="showHome()">← EXIT</a>
