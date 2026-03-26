@@ -211,7 +211,7 @@
   /* ── ARTICLE PAGE ── */
   .article-page {
     display: none;
-    padding: 40px 20px 100px;
+    padding: 40px 0 100px;
   }
 
   .article-page.active { display: block; animation: fadeIn 0.3s ease; }
@@ -673,6 +673,314 @@
   }
 
 
+  /* ── TAB NAV ── */
+  .tab-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    margin: 16px 0 0;
+  }
+
+  .tab-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  .tab-btn:hover { color: var(--text-dim); }
+  .tab-btn.active { color: var(--accent); }
+  .tab-btn.active::after { background: var(--accent); }
+
+  .tab-page { display: none; }
+  .tab-page.active { display: block; animation: fadeIn 0.3s ease; }
+
+  /* ── MEMECOIN SECTION ── */
+  .mc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mc-header h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .mc-stats {
+    display: flex;
+    gap: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .mc-stats .wl { font-weight: 700; }
+  .mc-stats .w { color: var(--green); }
+  .mc-stats .l { color: var(--red); }
+
+  .mc-filters {
+    display: flex;
+    gap: 6px;
+    padding: 16px 0;
+    flex-wrap: wrap;
+  }
+
+  .mc-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .mc-pill:hover { border-color: rgba(255,255,255,0.1); color: var(--text-dim); }
+  .mc-pill.active { background: rgba(212,132,62,0.08); border-color: rgba(212,132,62,0.3); color: var(--accent); }
+
+  .mc-grid { display: flex; flex-direction: column; gap: 12px; padding-bottom: 40px; }
+
+  .mc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    padding: 20px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mc-card:hover {
+    background: rgba(255,255,255,0.02);
+    transform: translateX(4px);
+  }
+
+  .mc-card.win { border-left-color: var(--green); box-shadow: inset 0 0 40px rgba(78,203,113,0.04); }
+  .mc-card.loss { border-left-color: var(--red); box-shadow: inset 0 0 40px rgba(224,85,69,0.04); }
+  .mc-card.open { border-left-color: var(--accent2); }
+
+  .mc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+
+  .mc-token { display: flex; align-items: center; gap: 10px; }
+
+  .mc-icon {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(212,132,62,0.08);
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .mc-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .mc-ticker {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .mc-result {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .mc-result.win { color: var(--green); background: rgba(78,203,113,0.06); border: 1px solid rgba(78,203,113,0.2); }
+  .mc-result.loss { color: var(--red); background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.2); }
+  .mc-result.open { color: var(--accent2); background: rgba(62,166,212,0.06); border: 1px solid rgba(62,166,212,0.2); }
+
+  .mc-tags { display: flex; gap: 5px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .mc-tag {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+  }
+
+  .mc-tag.snipe { background: rgba(168,85,247,0.08); color: #a855f7; border: 1px solid rgba(168,85,247,0.2); }
+  .mc-tag.swing { background: rgba(59,130,246,0.08); color: #3b82f6; border: 1px solid rgba(59,130,246,0.2); }
+  .mc-tag.degen { background: rgba(249,115,22,0.08); color: #f97316; border: 1px solid rgba(249,115,22,0.2); }
+  .mc-tag.narrative { background: rgba(212,132,62,0.06); color: var(--accent); border: 1px solid rgba(212,132,62,0.2); }
+  .mc-tag.ai { background: rgba(78,203,113,0.06); color: var(--green); border: 1px solid rgba(78,203,113,0.2); }
+  .mc-tag.sol { background: rgba(153,69,255,0.06); color: #9945ff; border: 1px solid rgba(153,69,255,0.2); }
+  .mc-tag.eth { background: rgba(98,126,234,0.06); color: #627eea; border: 1px solid rgba(98,126,234,0.2); }
+  .mc-tag.base { background: rgba(0,82,255,0.06); color: #0052ff; border: 1px solid rgba(0,82,255,0.2); }
+
+  .mc-thesis {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .mc-metrics { display: flex; gap: 20px; flex-wrap: wrap; }
+
+  .mc-metric {
+    font-size: 9px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  .mc-metric span {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .mc-proof {
+    width: 100%;
+    margin-top: 12px;
+    border: 1px dashed var(--border);
+    background: rgba(255,255,255,0.015);
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .mc-proof::before {
+    content: 'ATTACHMENT';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    opacity: 0.4;
+  }
+
+  .mc-proof img { width: 100%; display: block; }
+
+  .mc-proof-empty {
+    font-size: 10px;
+    color: var(--text-muted);
+    opacity: 0.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 20px;
+  }
+
+  .mc-date {
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 12px;
+    opacity: 0.6;
+  }
+
+  /* ── MARKET THOUGHTS ── */
+  .mt-feed { display: flex; flex-direction: column; gap: 16px; padding-bottom: 40px; }
+
+  .mt-entry {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 20px;
+    transition: all 0.25s;
+    position: relative;
+  }
+
+  .mt-entry:hover {
+    background: rgba(255,255,255,0.02);
+    transform: translateX(4px);
+  }
+
+  .mt-date {
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .mt-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .mt-mood {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    margin-bottom: 12px;
+  }
+
+  .mt-mood.bullish { background: rgba(78,203,113,0.06); color: var(--green); border: 1px solid rgba(78,203,113,0.2); }
+  .mt-mood.bearish { background: rgba(224,85,69,0.06); color: var(--red); border: 1px solid rgba(224,85,69,0.2); }
+  .mt-mood.neutral { background: rgba(255,255,255,0.03); color: var(--text-muted); border: 1px solid var(--border); }
+  .mt-mood.cautious { background: rgba(249,115,22,0.06); color: #f97316; border: 1px solid rgba(249,115,22,0.2); }
+
+  .mt-body {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
+
+  .mt-body p { margin-bottom: 10px; }
+  .mt-body p:last-child { margin-bottom: 0; }
+
+  .mt-tags { display: flex; gap: 5px; margin-top: 12px; flex-wrap: wrap; }
+
+  .mt-tag {
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     .hero-count { font-size: 64px; }
@@ -698,6 +1006,16 @@
         <a href="https://t.me/YOUR_CHANNEL" target="_blank">TELEGRAM</a>
       </div>
     </div>
+
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+      <button class="tab-btn active" data-tab="thesis">Altcoins</button>
+      <button class="tab-btn" data-tab="memecoins">Memecoins</button>
+      <button class="tab-btn" data-tab="thoughts">Thoughts</button>
+    </div>
+
+    <!-- ═══ THESIS TAB ═══ -->
+    <div class="tab-page active" id="tab-thesis">
 
     <!-- Hero -->
     <div class="hero">
@@ -799,6 +1117,169 @@
         </div>
       </div>
     </div>
+
+    </div><!-- /tab-thesis -->
+
+    <!-- ═══ MEMECOINS TAB ═══ -->
+    <div class="tab-page" id="tab-memecoins">
+      <div class="mc-header">
+        <h2>Memecoin Calls</h2>
+      </div>
+
+      <div class="mc-grid">
+
+        <div class="mc-card win" data-status="win">
+          <div class="mc-top">
+            <div class="mc-token">
+              <div><div class="mc-name">PEPE 2.0</div><div class="mc-ticker">$PEPE2 · SOL</div></div>
+            </div>
+            <div class="mc-result win">+340%</div>
+          </div>
+          <div class="mc-tags">
+            <span class="mc-tag narrative">Attention Play</span>
+          </div>
+          <div class="mc-thesis">Caught the meta rotation early. Frog szn was brewing on CT and this was the cleanest chart in the category. Sniped at $180K mcap, took profits at $800K.</div>
+          <div class="mc-metrics">
+            <div class="mc-metric">Entry MC<span>$180K</span></div>
+            <div class="mc-metric">Exit MC<span>$800K</span></div>
+            <div class="mc-metric">Chain<span>Solana</span></div>
+          </div>
+          <div class="mc-proof"><span class="mc-proof-empty">Add proof screenshot</span></div>
+          <div class="mc-date">Mar 18, 2026</div>
+        </div>
+
+        <div class="mc-card loss" data-status="loss">
+          <div class="mc-top">
+            <div class="mc-token">
+              <div><div class="mc-name">AGENTIC</div><div class="mc-ticker">$AGENT · BASE</div></div>
+            </div>
+            <div class="mc-result loss">-62%</div>
+          </div>
+          <div class="mc-tags">
+            <span class="mc-tag narrative">Sentiment Play</span>
+          </div>
+          <div class="mc-thesis">AI agent narrative was peaking. Entered on a breakout that turned into a fakeout — dev wallet started dumping within 2 hours. Cut loss fast.</div>
+          <div class="mc-metrics">
+            <div class="mc-metric">Entry MC<span>$2.1M</span></div>
+            <div class="mc-metric">Exit MC<span>$790K</span></div>
+            <div class="mc-metric">Chain<span>Base</span></div>
+          </div>
+          <div class="mc-proof"><span class="mc-proof-empty">Add proof screenshot</span></div>
+          <div class="mc-date">Mar 14, 2026</div>
+        </div>
+
+        <div class="mc-card win" data-status="win">
+          <div class="mc-top">
+            <div class="mc-token">
+              <div><div class="mc-name">DOGWIFSCARF</div><div class="mc-ticker">$DWS · SOL</div></div>
+            </div>
+            <div class="mc-result win">+128%</div>
+          </div>
+          <div class="mc-tags">
+            <span class="mc-tag narrative">Figure Watching Play</span>
+          </div>
+          <div class="mc-thesis">Pure degen play off a viral tweet. Liquidity was thin but the meme was strong. In and out in under an hour.</div>
+          <div class="mc-metrics">
+            <div class="mc-metric">Entry MC<span>$45K</span></div>
+            <div class="mc-metric">Exit MC<span>$102K</span></div>
+            <div class="mc-metric">Chain<span>Solana</span></div>
+          </div>
+          <div class="mc-proof"><span class="mc-proof-empty">Add proof screenshot</span></div>
+          <div class="mc-date">Mar 10, 2026</div>
+        </div>
+
+        <div class="mc-card open" data-status="open">
+          <div class="mc-top">
+            <div class="mc-token">
+              <div><div class="mc-name">VOLTAIRE</div><div class="mc-ticker">$VOLT · ETH</div></div>
+            </div>
+            <div class="mc-result open">OPEN</div>
+          </div>
+          <div class="mc-tags">
+            <span class="mc-tag narrative">Counter Narrative Play</span>
+          </div>
+          <div class="mc-thesis">Philosophical memecoins are having a moment. Strong community, organic growth, no paid shills. Watching for a breakout above $1.5M mcap.</div>
+          <div class="mc-metrics">
+            <div class="mc-metric">Entry MC<span>$620K</span></div>
+            <div class="mc-metric">Current MC<span>$1.1M</span></div>
+            <div class="mc-metric">Chain<span>Ethereum</span></div>
+          </div>
+          <div class="mc-proof"><span class="mc-proof-empty">Add proof screenshot</span></div>
+          <div class="mc-date">Mar 22, 2026 — ACTIVE</div>
+        </div>
+
+      </div>
+    </div><!-- /tab-memecoins -->
+
+    <!-- ═══ THOUGHTS TAB ═══ -->
+    <div class="tab-page" id="tab-thoughts">
+      <div class="mc-header">
+        <h2>Market Thoughts</h2>
+      </div>
+
+      <div class="mt-feed" style="margin-top:16px;">
+
+        <div class="mt-entry">
+          <div class="mt-date">Mar 24, 2026</div>
+          <div class="mt-title">Attention Is the Only Moat in Memecoins</div>
+          <div class="mt-body">
+            <p>Been thinking about this a lot — the memecoin market doesn't reward fundamentals, it rewards attention capture. The tokens that survive aren't the ones with the best tokenomics or the cleanest contracts. They're the ones that hijack a narrative at exactly the right moment.</p>
+            <p>This is why I keep coming back to the attention arbitrage framework. You're not trading tokens, you're trading mindshare. The chart is just a lagging indicator of how many people care right now.</p>
+          </div>
+          <div class="mt-tags">
+            <span class="mt-tag">memecoins</span>
+            <span class="mt-tag">attention</span>
+            <span class="mt-tag">framework</span>
+          </div>
+        </div>
+
+        <div class="mt-entry">
+          <div class="mt-date">Mar 20, 2026</div>
+          <div class="mt-title">The Perps Landscape Is Fragmenting — And That's Bullish</div>
+          <div class="mt-body">
+            <p>Every chain wants its own perps DEX now. Hyperliquid proved the model, and now we're seeing Lighter, Extended, Variational all carving out niches. The old platform maximalism take is dead.</p>
+            <p>What matters now is execution speed, liquidity depth, and UX. The winners will be the ones that feel like CEXs but run on-chain. Keep watching the fee revenue numbers on DeFiLlama — that's your real signal.</p>
+          </div>
+          <div class="mt-tags">
+            <span class="mt-tag">perps</span>
+            <span class="mt-tag">defi</span>
+            <span class="mt-tag">infrastructure</span>
+          </div>
+        </div>
+
+        <div class="mt-entry">
+          <div class="mt-date">Mar 15, 2026</div>
+          <div class="mt-title">Trading Psychology Check-In: Tilt Is Real</div>
+          <div class="mt-body">
+            <p>Took that $AGENT L and immediately wanted to revenge trade. Caught myself. Closed the charts, went for a walk. The edge you lose before the money is always the emotional edge.</p>
+            <p>Reminder to self: position sizing is risk management. If a loss makes you emotional, the size was too big. Period.</p>
+          </div>
+          <div class="mt-tags">
+            <span class="mt-tag">psychology</span>
+            <span class="mt-tag">risk</span>
+            <span class="mt-tag">journal</span>
+          </div>
+        </div>
+
+        <div class="mt-entry">
+          <div class="mt-date">Mar 8, 2026</div>
+          <div class="mt-title">SOL Memecoins vs ETH Memecoins — Different Games</div>
+          <div class="mt-body">
+            <p>SOL memes move faster, die faster. ETH memes move slower but have stickier communities. Base is somewhere in between — cheaper gas than ETH, more institutional-adjacent vibes.</p>
+            <p>Your strategy has to adapt to the chain. What works as a snipe on Solana doesn't translate to Ethereum. Different liquidity profiles, different holder behavior, different exit windows.</p>
+          </div>
+          <div class="mt-tags">
+            <span class="mt-tag">solana</span>
+            <span class="mt-tag">ethereum</span>
+            <span class="mt-tag">base</span>
+            <span class="mt-tag">strategy</span>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /tab-thoughts -->
+
+  </div>
 
   </div>
 
@@ -905,7 +1386,15 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-page').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
 </script>
 
 </body>
