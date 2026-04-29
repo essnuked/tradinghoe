@@ -661,16 +661,6 @@
     position: relative;
   }
 
-  .article-img::before {
-    content: 'ATTACHMENT';
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--text-muted);
-    opacity: 0.5;
-  }
 
   .article-img img {
     width: 100%;
@@ -789,6 +779,48 @@
     border: 1px solid var(--border);
   }
 
+  .target-hit {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    background: rgba(78,203,113,0.08);
+    border: 1px solid rgba(78,203,113,0.25);
+    padding: 2px 8px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .article-body pre {
+    background: #0a0a0f;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    margin: 16px 0 24px;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--green);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    -webkit-user-select: all;
+    user-select: all;
+    cursor: text;
+  }
+
+  .article-body code {
+    background: rgba(255,255,255,0.06);
+    padding: 2px 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--green);
+    border-radius: 2px;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     .hero-count { font-size: 64px; }
@@ -811,7 +843,7 @@
       <div class="header-right">
         <a href="https://x.com/tradinghoex" target="_blank">𝕏</a>
         <a href="https://substack.com/@newcoingood" target="_blank">SUBSTACK</a>
-        <a href="https://t.me/YOUR_CHANNEL" target="_blank">TELEGRAM</a>
+        <a href="https://t.me/Thresearch" target="_blank">TELEGRAM</a>
       </div>
     </div>
 
@@ -822,7 +854,7 @@
     </div>
 
     <div style="padding: 14px 0; border-bottom: 1px solid var(--border);">
-      <span onclick="this.innerHTML='██████ SHHH... WILL ADD SOON ██████'; this.style.color='var(--accent)'; this.style.cursor='default';" style="font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); cursor: pointer; transition: color 0.2s;">Memecoin Calls → [REDACTED]</span>
+      <a href="https://t.me/Thresearch" target="_blank" style="font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; text-decoration: none;">Memecoin Calls → Telegram ↗</a>
     </div>
 
     <!-- ═══ ALTCOINS TAB ═══ -->
@@ -841,90 +873,54 @@
           <div class="coin-mini-face coin-mini-back">TH</div>
         </div>
       </div>
-      <div class="hero-tagline">The market doesn't care about your conviction.<br>It only respects your discipline.</div>
+      <div class="hero-tagline">first to the new thing</div>
       <div class="hero-sub"><span>|</span> THESIS ARCHIVE</div>
     </div>
 
     <!-- Thesis: $VVV -->
     <div class="thesis-card stagger-in" onclick="showArticle('vvv')">
-      <div class="thesis-card-title">$VVV — Venice Token</div>
+      <div class="thesis-card-title">$VVV - Venice Token</div>
       <div class="thesis-card-meta">
-        <span class="date">03-2025</span>
+        <span class="date">03-2026</span>
         <span class="tag">Investment Thesis</span>
-        <span class="price-tag">Entry $3.20</span>
+        <span class="price-tag">Entry $5.40</span>
       </div>
       <div class="thesis-stat">
         <div class="stat-item">
           <span class="stat-label">Entry</span>
-          <span class="stat-value">$3.20</span>
+          <span class="stat-value">$5.40</span>
         </div>
         <div class="stat-item">
-          <span class="stat-label">Target</span>
-          <span class="stat-value green">$12.00</span>
+          <span class="stat-label">ATH</span>
+          <span class="stat-value green">$9.58</span>
         </div>
         <div class="stat-item">
           <span class="stat-label">Upside</span>
-          <span class="stat-value green">275%</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Conviction</span>
-          <span class="stat-value accent">HIGH</span>
+          <span class="stat-value green">77%</span>
         </div>
       </div>
     </div>
 
     <!-- Thesis: $TAO -->
     <div class="thesis-card stagger-in" onclick="showArticle('tao')">
-      <div class="thesis-card-title">$TAO — Bittensor</div>
+      <div class="thesis-card-title">$TAO - Bittensor</div>
       <div class="thesis-card-meta">
-        <span class="date">02-2025</span>
+        <span class="date">03-2026</span>
         <span class="tag">Investment Thesis</span>
-        <span class="price-tag">Entry $420.00</span>
+        <span class="price-tag">Entry $175.47</span>
       </div>
       <div class="thesis-stat">
         <div class="stat-item">
           <span class="stat-label">Entry</span>
-          <span class="stat-value">$420</span>
+          <span class="stat-value">$175.47</span>
         </div>
         <div class="stat-item">
-          <span class="stat-label">Target</span>
-          <span class="stat-value green">$1,200</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Upside</span>
-          <span class="stat-value green">186%</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Conviction</span>
-          <span class="stat-value accent">HIGH</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Thesis: $NEAR -->
-    <div class="thesis-card stagger-in" onclick="showArticle('near')">
-      <div class="thesis-card-title">$NEAR — Near Protocol</div>
-      <div class="thesis-card-meta">
-        <span class="date">01-2025</span>
-        <span class="tag">Investment Thesis</span>
-        <span class="price-tag">Entry $5.10</span>
-      </div>
-      <div class="thesis-stat">
-        <div class="stat-item">
-          <span class="stat-label">Entry</span>
-          <span class="stat-value">$5.10</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Target</span>
-          <span class="stat-value green">$18.00</span>
+          <span class="stat-label">ATH</span>
+          <span class="stat-value green">$378</span>
         </div>
         <div class="stat-item">
           <span class="stat-label">Upside</span>
-          <span class="stat-value green">253%</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Conviction</span>
-          <span class="stat-value accent">MED</span>
+          <span class="stat-value green">115%</span>
         </div>
       </div>
     </div>
@@ -939,60 +935,16 @@
 
       <div class="mt-feed" style="margin-top:16px;">
 
-        <div class="mt-entry">
-          <div class="mt-date">Mar 24, 2026</div>
-          <div class="mt-title">Attention Is the Only Moat in Memecoins</div>
+        <div class="mt-entry" onclick="showArticle('orderbook')" style="cursor:pointer;">
+          <div class="mt-date">Apr 25, 2026</div>
+          <div class="mt-title">How to Build an Order Book Collector</div>
           <div class="mt-body">
-            <p>Been thinking about this a lot — the memecoin market doesn't reward fundamentals, it rewards attention capture. The tokens that survive aren't the ones with the best tokenomics or the cleanest contracts. They're the ones that hijack a narrative at exactly the right moment.</p>
-            <p>This is why I keep coming back to the attention arbitrage framework. You're not trading tokens, you're trading mindshare. The chart is just a lagging indicator of how many people care right now.</p>
+            <p>No exchange stores historical order book data. Once a moment passes, the resting bids and asks are gone. A step-by-step guide to building your own order book collector bot. $6/month, 15 minutes, no API keys needed.</p>
           </div>
           <div class="mt-tags">
-            <span class="mt-tag">memecoins</span>
-            <span class="mt-tag">attention</span>
-            <span class="mt-tag">framework</span>
-          </div>
-        </div>
-
-        <div class="mt-entry">
-          <div class="mt-date">Mar 20, 2026</div>
-          <div class="mt-title">The Perps Landscape Is Fragmenting — And That's Bullish</div>
-          <div class="mt-body">
-            <p>Every chain wants its own perps DEX now. Hyperliquid proved the model, and now we're seeing Lighter, Extended, Variational all carving out niches. The old platform maximalism take is dead.</p>
-            <p>What matters now is execution speed, liquidity depth, and UX. The winners will be the ones that feel like CEXs but run on-chain. Keep watching the fee revenue numbers on DeFiLlama — that's your real signal.</p>
-          </div>
-          <div class="mt-tags">
-            <span class="mt-tag">perps</span>
-            <span class="mt-tag">defi</span>
-            <span class="mt-tag">infrastructure</span>
-          </div>
-        </div>
-
-        <div class="mt-entry">
-          <div class="mt-date">Mar 15, 2026</div>
-          <div class="mt-title">Trading Psychology Check-In: Tilt Is Real</div>
-          <div class="mt-body">
-            <p>Took that $AGENT L and immediately wanted to revenge trade. Caught myself. Closed the charts, went for a walk. The edge you lose before the money is always the emotional edge.</p>
-            <p>Reminder to self: position sizing is risk management. If a loss makes you emotional, the size was too big. Period.</p>
-          </div>
-          <div class="mt-tags">
-            <span class="mt-tag">psychology</span>
-            <span class="mt-tag">risk</span>
-            <span class="mt-tag">journal</span>
-          </div>
-        </div>
-
-        <div class="mt-entry">
-          <div class="mt-date">Mar 8, 2026</div>
-          <div class="mt-title">SOL Memecoins vs ETH Memecoins — Different Games</div>
-          <div class="mt-body">
-            <p>SOL memes move faster, die faster. ETH memes move slower but have stickier communities. Base is somewhere in between — cheaper gas than ETH, more institutional-adjacent vibes.</p>
-            <p>Your strategy has to adapt to the chain. What works as a snipe on Solana doesn't translate to Ethereum. Different liquidity profiles, different holder behavior, different exit windows.</p>
-          </div>
-          <div class="mt-tags">
-            <span class="mt-tag">solana</span>
-            <span class="mt-tag">ethereum</span>
-            <span class="mt-tag">base</span>
-            <span class="mt-tag">strategy</span>
+            <span class="mt-tag">tools</span>
+            <span class="mt-tag">order book</span>
+            <span class="mt-tag">guide</span>
           </div>
         </div>
 
@@ -1005,85 +957,419 @@
 
   <div class="article-page" id="article-vvv">
     <a class="back-link" onclick="showHome()">← EXIT</a>
-    <h1>$VVV — Venice Token</h1>
+    <h1>$VVV - Venice Token</h1>
     <div class="article-meta">
-      <span class="date">03-2025</span> · <span class="tag">Investment Thesis</span> · Entry $3.20
+      <span class="date">03-2026</span> · <span class="tag">Investment Thesis</span> · Entry $5.40 · AI x Privacy Infra
     </div>
     <div class="article-img">
-      <!-- Replace with: <img src="vvv-chart.png" alt="$VVV" /> -->
-      <span class="thesis-img-placeholder">$VVV image — replace this</span>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAIAAAAP3aGbAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFSGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTA0LTI4PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUhJTHRKZ1BNayZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBRWVBU0NMT2VNJnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0JBRWVBVkNIZHQ0JnF1b3Q7fTwvQXR0cmliOkRhdGE+CiAgICAgPEF0dHJpYjpFeHRJZD5iMDQ3ZDRhNi1lNzZhLTQ3OWUtYjFlMC0zODMxM2NmMmYxMjk8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4x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" alt="$VVV - Venice Token" />
     </div>
     <div class="article-body">
       <h2>Overview</h2>
-      <p>Your VVV thesis goes here. Write your full investment memo — the narrative, the catalysts, the valuation framework, the risk factors.</p>
+      <p>Venice ($VVV) is a privacy-first, censorship-resistant AI inference platform built on Base (Ethereum L2), founded by Erik Voorhees, the serial entrepreneur behind ShapeShift. The protocol tokenizes access to private AI inference: staking VVV grants a proportional, perpetual share of the platform's API capacity at zero marginal cost.</p>
+      <p>With over 450,000 registered users, a two-token model ($VVV + $DIEM), and API revenue flowing into monthly buybacks and burns, VVV sits at the intersection of two dominant narratives, AI agents and on-chain privacy.</p>
+      <p>With the rise of autonomous agents and AI automation, I believe VVV is one to look into. Venice serves as a private and uncensored alternative to ChatGPT.</p>
+
+      <h2>Tokenomics</h2>
+      <p><strong>Token:</strong> $VVV · <strong>Chain:</strong> Base (Ethereum L2) · <strong>Total Supply:</strong> 100,000,000 · <strong>Circulating:</strong> ~46.14M · <strong>Current Supply:</strong> ~79.73M · <strong>Category:</strong> AI x Privacy Infra</p>
+
       <h2>Thesis</h2>
-      <p>Why you believe in this token. What's the asymmetric setup. What catalysts are upcoming. What the market is missing.</p>
+      <p><strong>1. The AI Surveillance Problem is Real and Structurally Growing</strong></p>
+      <p>Every prompt sent to ChatGPT, Gemini, Grok, or Perplexity is stored permanently unless deleted, and is subject to government data requests. This is the documented business model of centralized AI providers. As AI integrates deeper into legal, financial, medical, and personal workflows, the value of private inference increases structurally. Venice is the only consumer-grade product built entirely around this constraint.</p>
+      <p>Venice stores every message on your local browser storage encrypted, but there is one issue. Every request passes through GPUs in data centers which have to read your message to process it. You'd have to trust it is not logged, but Erik claims they have control in data centers under ZDR guarantees.</p>
+
+      <p><strong>2. AI Agents Need Permissionless, Persistent Inference</strong></p>
+      <p>Autonomous AI agents need continuous, uncensored, and cost-predictable access to inference. Today, they depend on OpenAI and Anthropic APIs that impose content restrictions, per-request billing friction, and surveillance. VVV was designed primarily for agents, to reduce economic friction. It solves the bottleneck of pay-per-request usually used in the centralized world.</p>
+      <p>It was the first airdrop targeting AI agents themselves. 25% of the genesis supply was allocated to AI community protocol accounts on Base (Virtuals, and agents like Luna, aixbt, VaderAI, and others). This is a genuine product-market signal that no competitor can claim.</p>
+
+      <p><strong>3. Deflationary Token Economics with a Real Revenue Feedback Loop</strong></p>
+      <p>VVV has a rather interesting tokenomics setup. Annual emissions started at 14M VVV/year and have been aggressively reduced, currently at 6M, dropping to 3M by July 2026. Revenue from subscriptions and API usage is directed into monthly buybacks and burns. The initial supply was 100M but 42.9% of the original genesis supply has been permanently burned to date.</p>
+      <p>As GPU compute costs decline (Moore's Law), a fixed VVV stake commands a growing share of Venice's expanding compute capacity. Simultaneously, API revenue is directed into monthly VVV buybacks and burns. This creates a dual deflationary mechanism: expanding capacity per token + shrinking supply.</p>
+
+      <p>Demand for VVV is justified by the utility of staking it to own a share of Venice's AI inference capacity. When you stake VVV you can mint DIEM, which equates to $1/day of inference capacity.</p>
+
+      <h2>Team</h2>
+      <p><strong>Erik Voorhees</strong> (Co-Founder & CEO) is one of crypto's most credible operators. Track record includes BitInstant (early executive at one of the first fiat-to-crypto ramps), ShapeShift (founded and scaled one of the first non-custodial exchanges to billions in volume; later transitioned to a DAO), and Venice.ai (2024, applying the same privacy-first philosophy to AI inference). <strong>Teana Baker-Taylor</strong> serves as Co-Founder, bringing institutional and regulatory experience from her role as VP at Circle.</p>
+
+      <h2>Product</h2>
+      <p>Venice.ai launched May 2024 as a private, uncensored alternative to ChatGPT. Privacy by architecture: Venice does not store conversations on its servers. Uncensored models with content filters removed. Open-source stack built entirely on open-source models. Mobile app available on iOS and Android.</p>
+      <p>The two-token architecture ($VVV for staking + access and $DIEM as compute credits) resolves the dilution problem of the original pro-rata staking model. DIEM replaces this with a fixed, dollar-denominated compute credit.</p>
+
       <h2>Valuation</h2>
-      <p>FDV analysis, market cap comparison, token economics breakdown. How you arrived at the entry price and target.</p>
+      <p>VVV's correlation with BTC is ~0.6, indicating meaningful idiosyncratic upside tied to AI-specific sentiment. Macro AI tailwinds (NVIDIA earnings, agent proliferation, enterprise AI adoption) serve as external catalysts regardless of Venice's internal metrics.</p>
+      <p>Using Bittensor ($TAO) as a comparable at ~$2.5B market cap for decentralized AI compute infrastructure, VVV at an entry of $5.40 (~$240M circulating cap) represents a ~10x discount. If VVV reaches 30-50% of TAO's valuation on fundamentals convergence, the implied circulating cap is $750M-$1.25B, or roughly $16-$27 per token.</p>
+      <p>The more autonomous agents go mainstream, the higher Venice revenue.</p>
+
       <h2>Risks</h2>
-      <p>What could go wrong. What would make you exit. What the bear case looks like.</p>
+      <p><strong>Emissions dilution:</strong> Annual token emissions create structural sell pressure. Revenue buybacks must outpace emissions for net deflation.</p>
+      <p><strong>Compute trust assumption:</strong> Originally, client-side privacy relied on trusting GPU node operators not to log inference. Venice has since addressed this with four privacy modes, including TEE (hardware-isolated GPU processing) and E2EE (end-to-end encryption) for Pro users, alongside ZDR (Zero Data Retention) guarantees at the data center level. The default "Private" mode is now contract-enforced ZDR.</p>
+      <p><strong>Regulatory exposure:</strong> Uncensored AI models may attract regulatory attention in EU, UK, and US jurisdictions.</p>
+
+      <h2>Recommendation</h2>
+      <p>A lot of people with capital will always be waiting to bid the token with significant strength when BTC is dumping. There will be tourists in the token who'd sell when "market not go up." This will be particularly a good time to get a position because this token fits the economic state we are in right now: AI agents going full stream and eventually being used to do even more important stuff. I think this token fits into that state perfectly. Look at it like the ZEC of AI agents.</p>
+
+      <h2>Update, April 2026</h2>
+      <p><strong>Emissions slashed aggressively.</strong> Venice originally set emissions at 14M VVV/year. This was cut to 8M, then permanently reduced 25% to 6M in February 2026. The team announced a further 50% reduction: 6M to 5M (May 1), 5M to 4M (June 1), 4M to 3M (July 1, 2026). The goal is to cross the threshold where VVV burns exceed emissions, making VVV net deflationary while still generating native yield for stakers.</p>
+      <p><strong>Programmatic burn engine launched.</strong> As of April 15, 2026, every new Venice Pro subscription triggers an automated VVV market buy and burn on-chain. Since April 26, burns are now tier-aware: $2 per Pro sub, $5 per Pro+, $10 per Max subscription. Live burn data at <a href="https://venicestats.com/burns" target="_blank" style="color:var(--accent);">venicestats.com/burns</a>. Over 33.7M tokens (~42.9% of the original 100M genesis supply) have been permanently burned to date.</p>
+      <p><strong>OpenClaw integration.</strong> On March 2, 2026, OpenClaw, a leading decentralized AI framework, named Venice AI as its recommended model provider, listing venice/llama-3.3-70b as the default model and venice/claude-opus-45 as "best overall." VVV spiked 20% on the news. Note: Venice remains listed as a provider in the OpenClaw docs as of April 2026, though the initial "highlight" framing has been toned down. Venice is now one of several supported providers rather than the sole recommendation.</p>
+      <p><strong>2M registered users.</strong> Venice crossed 2,000,000 registered users, up from 450K at the time of this thesis. API demand has surged 5-50x as users migrate from restrictive centralized AI providers.</p>
+      <p><strong>EXPAND allocation.</strong> Venice introduced EXPAND, a new reward allocation for VVV holders, functioning like an airdrop/bonus that incentivizes accumulation.</p>
+      <p><strong>Peak $9.58.</strong> VVV rallied ~10x from its yearly low, the best YTD performance for a non-scam coin. The token is currently trading around $8.50-$9.00 with a market cap exceeding $400M.</p>
+      <p><strong>Four Privacy Modes launched.</strong> Venice introduced four distinct privacy tiers for every AI model on the platform. Private (zero data retention, contract-enforced, default), Anonymous (identity obscured from provider), TEE (hardware-isolated GPU processing, Pro), and E2EE (encrypted end-to-end, fully verifiable, Pro). This directly addresses the compute trust assumption in the original thesis. Users now have granular control over their privacy level rather than relying solely on trust.</p>
     </div>
     <div class="thesis-sig">
-      <div>Published by <span class="sig-name">tradinghoe</span></div>
+      <div>Published by <span class="sig-name">tradinghoe</span> · March 4, 2026</div>
       <div class="sig-disclaimer">Not financial advice. Do your own research.</div>
     </div>
   </div>
 
   <div class="article-page" id="article-tao">
     <a class="back-link" onclick="showHome()">← EXIT</a>
-    <h1>$TAO — Bittensor</h1>
+    <h1>$TAO - Bittensor</h1>
     <div class="article-meta">
-      <span class="date">02-2025</span> · <span class="tag">Investment Thesis</span> · Entry $420.00
+      <span class="date">03-2026</span> · <span class="tag">Investment Thesis</span> · Entry $175.47 · AI Broad Infra
     </div>
     <div class="article-img">
-      <!-- Replace with: <img src="tao-chart.png" alt="$TAO" /> -->
-      <span class="thesis-img-placeholder">$TAO image — replace this</span>
+      <img src="data:image/jpeg;base64,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88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888884rDDDDDDS8888888888888888DAAAIAAEc8888888888888888888Ww88888888888888888888888WA38888888888888888888888WAX8888888888888888888888WAX8888888888888888888888WAX8888888888888888888888WAX88888888888888888888884IX88888888888888888888888cf888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888//EABkRAAMBAQEAAAAAAAAAAAAAAAERQAAQcP/aAAgBAwEBPxD1F555555xGw0ngnPBOeCc8E54KRSvO//EABkRAAMBAQEAAAAAAAAAAAAAAAERQAAQcP/aAAgBAgEBPxD1FZZZZZZRCwUjhnHDOOGccM44aTQ8/O//xAAhEAEBAQACAQQDAQAAAAAAAAABESExUAAQIDBBUWGQcf/aAAgBAQABPxD+mTjaHOiBQC0DTdKDmBE2mgYPGj9X5sWLFixYsWLFixYsTkQW5uCzQ+pB3otEL5Ek4dS5ICwHi61+f7e0pmFmcWOujR6BkBcQZGisAwLEEr5/uRHxkxnUbqqAKBQcZWSHvyoCBYAQOgHyYC2CLhQY7vJ70KFChQoQMFe5qAEWkXij+PLRjyqVVBiIx5E9yFChQoS2HMAqCNq1ADVDw46BFF16KNIRYwsRwHgQZmGwAKQFXpz0wx4AURQfDoUlQo+cC5qPELGCjDwQHXz2YZ4x6Tr2CgVqsJLnWnsw8MkuFJrws01c+49adlh5nZYeZ2WHmdlh5nZYeZ2WHmdlh5nZYeZ2eHmywfcjvq7iSZ/rPSZ8SK9KhUUvXsvjDZRETQGjnFeN/AgqiGiIiPHqwxDFe4io2omgr1ymMRpwQDOfaGCjwa8YDjdGAsRI3RniuiOIqBoIImiecmI4OInOFRGtjsDPsABgKiwAK8AeajDq5zCFYb/NP//Z" alt="$TAO - Bittensor" />
     </div>
     <div class="article-body">
       <h2>Overview</h2>
-      <p>Your TAO thesis goes here. The decentralized AI narrative, subnet economics, competitive positioning.</p>
-      <h2>Thesis</h2>
-      <p>Why TAO is positioned to capture value in the AI x crypto intersection. What makes Bittensor's approach different.</p>
-      <h2>Valuation</h2>
-      <p>Your valuation framework and price targets.</p>
-      <h2>Risks</h2>
-      <p>Regulatory, technical, and market risks.</p>
+      <p>Bittensor is an open source platform where participants produce best-in-class digital commodities including compute power, storage space, AI inference and training, protein folding, financial markets prediction and more.</p>
+      <p>TAO is the currency of the ecosystem. There will only be 21 million TAO (same idea as Bitcoin scarcity). New TAO gets created every block and handed out to people doing useful work. The amount of new TAO being created recently got cut in half (the "halving" in December 2025), which means it gets scarcer over time.</p>
+
+      <h2>Tokenomics</h2>
+      <p><strong>Token:</strong> $TAO · <strong>Max Supply:</strong> 21,000,000 · <strong>Circulating:</strong> ~10.85M (~52%) · <strong>Halving:</strong> December 14, 2025 · <strong>Daily Emissions:</strong> 3,600 TAO (down from 7,200) · <strong>Staked:</strong> ~70% of circulating supply · <strong>Active Subnets:</strong> 128+ · <strong>ATH:</strong> $378</p>
+
+      <h2>Subnets</h2>
+      <p>Think of subnets as different departments in a company, except each one is its own mini marketplace focused on one specific AI task. Each subnet consists of:</p>
+      <p><strong>Miners:</strong> the workers. They run AI models or provide computing power. They're competing against each other to do the best job.</p>
+      <p><strong>Validators:</strong> the judges. They test the miners' work and score it. Good miners get more TAO, bad miners get less. The matrix of these scores, by each validator for each miner, serves as input to Yuma Consensus.</p>
+      <p><strong>Subnet Creators:</strong> the managers. They design the subnet and write the rules for what counts as "good work."</p>
+      <p>The Yuma Consensus algorithm operates on-chain and determines emissions to miners, validators, and subnet creators across the platform, based on performance. There are currently 128+ of these subnets: <a href="https://taostats.io/" target="_blank" style="color:var(--accent);">taostats.io</a></p>
+
+      <h2>Subnet Economics (dTAO)</h2>
+      <p>Each subnet functions as its own automated market maker (AMM), with two liquidity reserves: one containing TAO, the currency of the Bittensor network, and one containing a subnet-specific "dynamic" currency, referred to as that subnet's alpha token. The alpha token is purchased by staking TAO into the subnet's reserve.</p>
+      <p>A subnet's economy consists of three pools: TAO reserves (the amount of TAO staked into the subnet), Alpha reserves (the amount of alpha available for purchase), and Alpha outstanding (the amount of alpha held in the hotkeys of a subnet's participants, also referred to as the total stake in the subnet).</p>
+      <p>The price of a subnet's alpha token is determined by the ratio of TAO in that subnet's reserve to its alpha in reserve.</p>
+      <p>As TAO holders stake TAO into subnets in exchange for the subnet-specific alpha, they are essentially "voting with their TAO" for the value of the subnet. Subnets with more staking than unstaking receive higher emissions, while subnets with net outflows receive reduced or zero emissions. This flow-based model rewards subnets that attract genuine user engagement. In return, stakers extract a share of the subnet's emissions.</p>
+
+      <h2>Top 5 Subnets</h2>
+      <p><strong>Chutes (SN64)</strong> is cited as the leader for serverless compute for AI at scale. It lets you run AI models in the cloud without managing servers.</p>
+      <p><strong>Templar (SN3)</strong> focuses on collaborative model training. Instead of one big company training an AI model behind closed doors, Templar lets a distributed network of miners work together to train models collectively. One of the older subnets and has consistently stayed near the top.</p>
+      <p><strong>Affine (SN120)</strong> coordinates other subnets so they can work together through reinforcement learning and model evaluation. Right now, all these subnets work in isolation. Chutes does compute, Ridges does coding, Targon does verification, but none of them talk to each other. Rather than specializing in a single service, Affine aims to connect and compose the services of multiple subnets, like taking compute from Chutes and combining it with coding from Ridges to deliver a complete solution. It also runs a never-ending competition where miners fine-tune AI models on hard puzzles like coding and multi-step logic, upload the improved model to Chutes, and validators test every model head-to-head. The single best one wins the entire daily prize pool, and every other miner downloads it and tries to beat it next round. A big deal here: the team includes Jacob Steeves, the co-founder of Bittensor itself, who stepped down as CEO of the Opentensor Foundation to build this subnet.</p>
+      <p><strong>Targon (SN4)</strong> also functions as a compute marketplace like Chutes, but with a twist: it has its own network called the TVM (Targon Virtual Machine) where you can build and test privately, without others seeing what you're doing or how many GPUs you're using.</p>
+      <p><strong>Ridges (SN62)</strong> is building a platform where you can allow AI agents to solve software problems, end-to-end. Instead of an engineer going back and forth with a model, they should be able to submit an entire problem and reliably know that it will be completed for them.</p>
+
+      <h2>Root Subnet</h2>
+      <p>Root subnet or Subnet Zero is a special subnet on Bittensor. It is the only subnet without its own alpha currency. No miners can register on subnet zero, and no validation work is performed. However, validators can register on the root subnet, and TAO holders can stake to those validators, as with any other subnet. This offers a mechanism for TAO holders to stake TAO into validators in a subnet-agnostic way.</p>
+
+      <h2>Staking</h2>
+      <p>TAO holders can stake any amount they hold to a validator. After the validator extracts their take, the remaining emissions are credited back to the stakers/delegators in proportion to their stake with that validator.</p>
+      <p>Staking is always local to a subnet. Each subnet operates its own AMM. You pick a specific subnet and a specific validator on that subnet. Your TAO goes into that subnet's TAO reserve in its AMM pool, and the AMM calculates the equivalent units of the subnet's alpha token at the current exchange rate. You now hold that subnet's alpha token, staked to that validator.</p>
+      <p>Staking to a given validator's hotkeys on different subnets is independent. So if you stake to Validator X on Subnet 3 and also on Subnet 119, those are two completely separate positions with two different alpha tokens and two different exchange rates.</p>
+      <p>Validator directory: <a href="https://www.tao.app/validators" target="_blank" style="color:var(--accent);">tao.app/validators</a></p>
+
+      <h2>How to Buy Subnet Tokens</h2>
+      <p>1. Download Talisman wallet (@wearetalisman)</p>
+      <p>2. Create ETH wallet + Substrate Account</p>
+      <p>3. Send ETH to ETH wallet</p>
+      <p>4. Use Talisman interface to cross-chain swap ETH to TAO, select from ETH wallet to Substrate account</p>
+      <p>5. Connect wallet and swap TAO to subnet tokens here: <a href="https://taostats.io/subnets" target="_blank" style="color:var(--accent);">taostats.io/subnets</a></p>
+
+      <h2>Bull Case</h2>
+      <p>AI demand is exploding, TAO supply is getting scarcer (halving), and if the subnets keep building real products that people actually pay for, demand for TAO goes up because you need it to use the network. There are also institutional products emerging: Grayscale and Bitwise have filed for TAO ETFs, Grayscale allocated 43.06% of its AI Fund to TAO (its largest single-asset reallocation to date), Nvidia invested $420M (with 77% staked), Polychain Capital added $200M in exposure, and there's a staked TAO product listing on the SIX Swiss Exchange. Over 70% of circulating TAO is staked, leaving a thin liquid float of roughly 3M tokens.</p>
+
+      <h2>Bear Case</h2>
+      <p>Most subnet alpha tokens still don't have clear revenue models, liquidity is thin (meaning prices can swing wildly on small trades), and it's still early enough that gaming the system is possible. Investors are demanding subnets prove they can compete with leading AI models like GPT and Gemini. TAO's value is increasingly tied to measurable AI output and subnet utility, not just speculation.</p>
+      <h2>Update, April 2026</h2>
+      <p><strong>Covenant AI exit (April 10).</strong> Covenant AI, operator of three major subnets (Templar SN3, Basilica SN39, Grail SN81), publicly exited Bittensor. Founder Sam Dare accused Bittensor co-founder Jacob Steeves of centralized control, calling the governance "decentralization theatre." Dare sold ~37,000 TAO (~$10M) into the market. TAO crashed 18-28% within hours, erasing a prior 100% rally and wiping ~$900M from market cap. Over $9M in long positions were liquidated in the cascade.</p>
+      <p><strong>Steeves denied all claims.</strong> Jacob Steeves responded that he does not have the ability to suspend emissions, that his token sales were less than 1% of what he invested in his teams, and that he reserves the right to buy and sell tokens like any normal TAO holder. The Bittensor network continued operating normally through the event.</p>
+      <p><strong>Community miners restored affected subnets.</strong> SN3, SN39, and SN81 were successfully restored by community miners using open-source code, demonstrating that the network can operate without any single central participant.</p>
+      <p><strong>Context:</strong> Covenant AI was one of 128+ subnets. The network generated an estimated $43M in Q1 2026 revenue across all subnets. 70% of circulating TAO remains staked. The exit was a sentiment event, not a fundamental network failure. TAO has since stabilized around the $240-$260 range.</p>
+
+      <p><strong>Bullish developments:</strong></p>
+      <p><strong>Nvidia $420M investment.</strong> Nvidia invested $420M into Bittensor with 77% staked. Polychain Capital added $200M in exposure. This is institutional-grade conviction.</p>
+      <p><strong>Grayscale AI Fund reallocation.</strong> Grayscale raised TAO weighting to 43.06% in its AI Fund on April 7, the largest single-asset reallocation in the fund's history.</p>
+      <p><strong>Spot TAO ETF filings.</strong> Grayscale and Bitwise submitted Spot TAO ETF applications on April 2. SEC decision anticipated by August 2026. An approved ETF would be the first AI-focused crypto ETF.</p>
+      <p><strong>Staked TAO on SIX Swiss Exchange.</strong> A staked TAO product is now listed on SIX Swiss Exchange, opening access to traditional finance investors.</p>
+      <p><strong>BitGo x Yuma partnership.</strong> Enables secure custody and staking for Bittensor subnet tokens, removing a major operational hurdle for institutional participants.</p>
     </div>
     <div class="thesis-sig">
-      <div>Published by <span class="sig-name">tradinghoe</span></div>
+      <div>Published by <span class="sig-name">tradinghoe</span> · March 7, 2026</div>
       <div class="sig-disclaimer">Not financial advice. Do your own research.</div>
     </div>
   </div>
 
-  <div class="article-page" id="article-near">
+  <div class="article-page" id="article-orderbook">
     <a class="back-link" onclick="showHome()">← EXIT</a>
-    <h1>$NEAR — Near Protocol</h1>
+    <h1>How to Build an Order Book Collector</h1>
     <div class="article-meta">
-      <span class="date">01-2025</span> · <span class="tag">Investment Thesis</span> · Entry $5.10
-    </div>
-    <div class="article-img">
-      <!-- Replace with: <img src="near-chart.png" alt="$NEAR" /> -->
-      <span class="thesis-img-placeholder">$NEAR image — replace this</span>
+      <span class="date">04-2026</span> · <span class="tag">Guide</span> · Tools
     </div>
     <div class="article-body">
-      <h2>Overview</h2>
-      <p>Your NEAR thesis goes here. Chain abstraction, scalability, developer ecosystem.</p>
-      <h2>Thesis</h2>
-      <p>Why NEAR's infrastructure approach positions it well for the next cycle.</p>
-      <h2>Valuation</h2>
-      <p>Your valuation framework and price targets.</p>
-      <h2>Risks</h2>
-      <p>Competition, adoption risk, market conditions.</p>
+      <p>No exchange stores historical order book data. Once a moment passes, the resting bids and asks are gone. No API lets you go back and retrieve them. If you want to know what the order book looked like last week, last month, or during a pump, you had to be collecting it at the time.</p>
+      <p>This is a step-by-step guide to building your own order book collector. A bot that snapshots Binance Futures order book depth, funding rates, and open interest every 60 seconds and saves everything into a local database. No API keys needed. The whole setup costs $6/month and takes about 15 minutes.</p>
+
+      <h2>Why This Matters</h2>
+      <p>The order book is the earliest signal of accumulation. When a whale uses TWAP or iceberg orders to slowly buy into a position, the fingerprint shows up in the order book days before the price move confirms it. Bid-ask imbalance stays elevated (above 0.4 for extended periods), ask-side depth thins out as sell orders get absorbed, and the bid/ask ratio creeps toward 1.0 without crossing it.</p>
+      <p>Tools like CoinAnk, Coinglass, and Binance show you the order book right now. None of them let you see what it looked like a week ago on a micro-cap token. This bot gives you that data.</p>
+
+      <h2>What You Need</h2>
+      <p>A server that runs 24/7. Your laptop won't work. It sleeps, restarts, loses Wi-Fi. You need a VPS (Virtual Private Server) that stays on permanently.</p>
+      <p>DigitalOcean: $6/month for the smallest droplet (1GB RAM, Ubuntu). Alternatives: Vultr ($6/month), Hetzner ($4/month), or any VPS provider running Ubuntu.</p>
+      <p>Python 3 (comes pre-installed on Ubuntu). The requests library (one install command). No API keys, no Binance account, no trading permissions. The bot uses Binance's public API endpoints which are free and open to anyone.</p>
+
+      <h2>Step 1: Get a Server</h2>
+      <p>Go to digitalocean.com and create an account. Click "Create Droplet." Choose Ubuntu 24.04, the $6/month plan (Regular, 1GB RAM), and pick a region close to you. Under Authentication, choose Password and set a root password. Click "Create Droplet" and wait 60 seconds. You'll get an IP address. That's your server.</p>
+
+      <h2>Step 2: Connect to Your Server</h2>
+      <p>Open Terminal on your Mac (or Command Prompt on Windows) and type:</p>
+      <pre>ssh root@YOUR_IP_ADDRESS</pre>
+      <p>If SSH times out on the public IP, install Tailscale on both your computer and the server for a reliable connection.</p>
+
+      <h2>Step 3: Install the One Dependency</h2>
+      <pre>apt update && apt install python3-pip -y
+pip install requests --break-system-packages</pre>
+
+      <h2>Step 4: Create the Bot</h2>
+      <p>Run:</p>
+      <pre>nano ~/bsb_collector.py</pre>
+      <p>Paste the full bot code below into the editor. Press Ctrl+X, then Y, then Enter to save.</p>
+
+      <pre>#!/usr/bin/env python3
+"""
+bsb_collector.py - Binance Order Book + Funding Rate Collector
+Snapshots order book depth, funding rates, OI into SQLite every 60s.
+No API keys needed - uses Binance's public endpoints.
+
+Usage:
+  python3 bsb_collector.py collect --symbols BSBUSDT
+  python3 bsb_collector.py collect --symbols BSBUSDT MYXUSDT SIRENUSDT
+  python3 bsb_collector.py backfill --symbol BSBUSDT --days 15
+  python3 bsb_collector.py export --symbol BSBUSDT
+"""
+import argparse, json, logging, signal, sqlite3, time
+from datetime import datetime, timezone, timedelta
+import requests
+
+FUTURES_BASE = "https://fapi.binance.com"
+ENDPOINTS = {
+    "depth": f"{FUTURES_BASE}/fapi/v1/depth",
+    "premium": f"{FUTURES_BASE}/fapi/v1/premiumIndex",
+    "oi": f"{FUTURES_BASE}/fapi/v1/openInterest",
+    "ticker": f"{FUTURES_BASE}/fapi/v1/ticker/24hr",
+    "klines": f"{FUTURES_BASE}/fapi/v1/klines",
+    "funding_history": f"{FUTURES_BASE}/fapi/v1/fundingRate",
+}
+
+logging.basicConfig(level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S")
+log = logging.getLogger("bsb")
+shutdown = False
+
+def _sig(s, f):
+    global shutdown
+    log.info("Shutting down...")
+    shutdown = True
+signal.signal(signal.SIGINT, _sig)
+signal.signal(signal.SIGTERM, _sig)
+
+def init_db(path):
+    conn = sqlite3.connect(path, timeout=30)
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA synchronous=NORMAL")
+    conn.executescript("""
+        CREATE TABLE IF NOT EXISTS snapshots (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            ts TEXT NOT NULL, ts_unix REAL NOT NULL,
+            symbol TEXT NOT NULL, price REAL,
+            mark_price REAL, index_price REAL,
+            funding_rate REAL, oi REAL, oi_notional REAL,
+            volume_24h REAL, bid_depth REAL NOT NULL,
+            ask_depth REAL NOT NULL, imbalance REAL NOT NULL,
+            best_bid REAL, best_ask REAL, spread REAL,
+            mid_price REAL, bids_json TEXT NOT NULL,
+            asks_json TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS anomalies (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            ts TEXT NOT NULL, ts_unix REAL NOT NULL,
+            symbol TEXT NOT NULL, event_type TEXT NOT NULL,
+            severity TEXT NOT NULL DEFAULT 'low',
+            value REAL, details TEXT);
+        CREATE INDEX IF NOT EXISTS idx_snap_sym_ts
+            ON snapshots(symbol, ts_unix);
+        CREATE INDEX IF NOT EXISTS idx_anom_sym_ts
+            ON anomalies(symbol, ts_unix);
+    """)
+    conn.commit()
+    log.info(f"DB ready: {path}")
+    return conn
+
+sess = requests.Session()
+sess.headers["User-Agent"] = "bsb/1.0"
+
+def api(url, params=None, retries=3):
+    for i in range(retries):
+        try:
+            r = sess.get(url, params=params, timeout=10)
+            if r.status_code == 429:
+                time.sleep(int(r.headers.get("Retry-After", 5)))
+                continue
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            log.warning(f"API fail ({i+1}/{retries}): {e}")
+            if i &lt; retries - 1: time.sleep(2 ** i)
+    return None
+
+def collect_snapshot(conn, symbol, depth):
+    now = datetime.now(timezone.utc)
+    now_unix, now_str = now.timestamp(), now.isoformat()
+    ob = api(ENDPOINTS["depth"], {"symbol": symbol, "limit": depth})
+    if not ob:
+        log.error(f"[{symbol}] order book fetch failed")
+        return
+    bids, asks = ob.get("bids", []), ob.get("asks", [])
+    bid_total = sum(float(b[1]) for b in bids)
+    ask_total = sum(float(a[1]) for a in asks)
+    total = bid_total + ask_total
+    imbalance = (bid_total - ask_total) / total if total &gt; 0 else 0.0
+    best_bid = float(bids[0][0]) if bids else None
+    best_ask = float(asks[0][0]) if asks else None
+    spread = (best_ask - best_bid) if best_bid and best_ask else None
+    mid = (best_bid + best_ask) / 2 if best_bid and best_ask else None
+    prem = api(ENDPOINTS["premium"], {"symbol": symbol})
+    funding = float(prem["lastFundingRate"]) if prem else None
+    mark = float(prem["markPrice"]) if prem else None
+    index = float(prem["indexPrice"]) if prem else None
+    oi_data = api(ENDPOINTS["oi"], {"symbol": symbol})
+    oi = float(oi_data["openInterest"]) if oi_data else None
+    oi_n = oi * mark if oi and mark else None
+    tk = api(ENDPOINTS["ticker"], {"symbol": symbol})
+    price = float(tk["lastPrice"]) if tk else mid
+    vol = float(tk["quoteVolume"]) if tk else None
+    conn.execute("""
+        INSERT INTO snapshots
+        (ts,ts_unix,symbol,price,mark_price,index_price,
+         funding_rate,oi,oi_notional,volume_24h,bid_depth,
+         ask_depth,imbalance,best_bid,best_ask,spread,
+         mid_price,bids_json,asks_json)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    """, (now_str,now_unix,symbol,price,mark,index,funding,
+          oi,oi_n,vol,bid_total,ask_total,imbalance,
+          best_bid,best_ask,spread,mid,
+          json.dumps(bids),json.dumps(asks)))
+    events = []
+    if abs(imbalance) &gt; 0.6:
+        events.append(("imbalance_spike","high",imbalance,
+            f"Imbalance {imbalance:.4f} exceeds 0.6"))
+    elif abs(imbalance) &gt; 0.4:
+        events.append(("imbalance_elevated","medium",imbalance,
+            f"Imbalance {imbalance:.4f} exceeds 0.4"))
+    hist = conn.execute("""
+        SELECT ask_depth FROM snapshots
+        WHERE symbol = ? ORDER BY ts_unix DESC LIMIT 30
+    """, (symbol,)).fetchall()
+    if len(hist) &gt;= 10:
+        avg_ask = sum(r[0] for r in hist) / len(hist)
+        if avg_ask &gt; 0 and ask_total &lt; avg_ask * 0.7:
+            drop = (1 - ask_total / avg_ask) * 100
+            events.append(("ask_thinning","high",drop,
+                f"Ask depth {drop:.1f}% below avg"))
+    recent = conn.execute("""
+        SELECT imbalance FROM snapshots
+        WHERE symbol = ? ORDER BY ts_unix DESC LIMIT 5
+    """, (symbol,)).fetchall()
+    if len(recent) &gt;= 5 and all(r[0] &gt; 0.4 for r in recent):
+        events.append(("sustained_imbalance","high",imbalance,
+            "Imbalance &gt;0.4 for 5+ consecutive snapshots"))
+    if funding is not None:
+        if funding &gt; 0.0005:
+            events.append(("funding_high","medium",funding*100,
+                f"Funding {funding*100:.4f}%"))
+        elif funding &lt; -0.0005:
+            events.append(("funding_low","medium",funding*100,
+                f"Funding {funding*100:.4f}%"))
+    for etype,sev,val,detail in events:
+        conn.execute("""
+            INSERT INTO anomalies
+            (ts,ts_unix,symbol,event_type,severity,value,details)
+            VALUES (?,?,?,?,?,?,?)
+        """, (now_str,now_unix,symbol,etype,sev,val,detail))
+    conn.commit()
+    flag = " !" if events else ""
+    log.info(f"[{symbol}] price={price:.6f} imb={imbalance:+.3f} "
+        f"bid={bid_total:.0f} ask={ask_total:.0f} "
+        f"fr={funding*100:.4f}% oi_n={oi_n or 0:,.0f}{flag}")
+
+def main():
+    p = argparse.ArgumentParser(description="BSB Collector")
+    sub = p.add_subparsers(dest="cmd")
+    c = sub.add_parser("collect")
+    c.add_argument("--symbols", nargs="+", default=["BSBUSDT"])
+    c.add_argument("--interval", type=int, default=60)
+    c.add_argument("--depth", type=int, default=20)
+    c.add_argument("--db", default="bsb_data.db")
+    b = sub.add_parser("backfill")
+    b.add_argument("--symbol", required=True)
+    b.add_argument("--days", type=int, default=15)
+    b.add_argument("--db", default="bsb_data.db")
+    e = sub.add_parser("export")
+    e.add_argument("--symbol", required=True)
+    e.add_argument("--hours", type=int, default=360)
+    e.add_argument("--out", default=None)
+    e.add_argument("--db", default="bsb_data.db")
+    args = p.parse_args()
+    if args.cmd == "collect":
+        conn = init_db(args.db)
+        log.info(f"Collecting {args.symbols} every {args.interval}s")
+        while not shutdown:
+            for sym in args.symbols:
+                try: collect_snapshot(conn, sym, args.depth)
+                except Exception as ex: log.error(f"[{sym}] {ex}")
+            time.sleep(args.interval)
+        conn.close()
+        log.info("Done.")
+    else:
+        p.print_help()
+
+if __name__ == "__main__":
+    main()</pre>
+
+      <h2>Step 5: Start Collecting</h2>
+      <pre>nohup python3 ~/bsb_collector.py collect --symbols BSBUSDT &gt; ~/bsb.log 2&gt;&amp;1 &amp;</pre>
+      <p>Check it's working:</p>
+      <pre>tail -f ~/bsb.log</pre>
+      <p>You should see a log line every 60 seconds showing price, imbalance, bid/ask depth, funding rate, and open interest. To track multiple tokens at once:</p>
+      <pre>nohup python3 ~/bsb_collector.py collect --symbols BSBUSDT MYXUSDT SIRENUSDT &gt; ~/bsb.log 2&gt;&amp;1 &amp;</pre>
+
+      <h2>Step 6: Backfill Historical Data</h2>
+      <pre>python3 ~/bsb_collector.py backfill --symbol BSBUSDT --days 15</pre>
+      <p>Important: backfilled data is not real order book depth. It's taker buy vs taker sell volume from hourly candles. A different measurement that shows the same accumulation patterns but at different scales. Live collection captures actual resting order book depth. Both are useful, but they're measuring different things.</p>
+
+      <h2>What Each Snapshot Contains</h2>
+      <p><strong>price:</strong> Last traded price on Binance Futures. <strong>mark_price:</strong> Composite index price (used for liquidations). <strong>funding_rate:</strong> Current funding rate (positive = longs pay shorts). <strong>oi / oi_notional:</strong> Open interest in token quantity and USDT. <strong>bid_depth / ask_depth:</strong> Total resting volume across top 20 levels. <strong>imbalance:</strong> (bid - ask) / (bid + ask), ranges from -1 to +1. <strong>spread:</strong> Gap between best ask and best bid. <strong>bids_json / asks_json:</strong> Raw order book levels (price + quantity per level).</p>
+
+      <h2>Anomaly Detection</h2>
+      <p>The bot runs four checks on every snapshot:</p>
+      <p><strong>Imbalance spike:</strong> Flags when bid-ask imbalance exceeds +/-0.4 (elevated) or +/-0.6 (spike). A reading of 0.4 means 70% of the order book is bids. Sustained above 0.4 means someone is loading.</p>
+      <p><strong>Ask-side thinning:</strong> Flags when ask depth drops 30%+ below its 30-snapshot rolling average. Sell orders are being absorbed faster than they're being replaced.</p>
+      <p><strong>Sustained imbalance:</strong> Flags when imbalance stays above 0.4 for 5+ consecutive readings. One elevated reading is noise. Five in a row is a pattern.</p>
+      <p><strong>Funding rate extreme:</strong> Flags when funding exceeds +/-0.05%. Deeply positive = longs overheated. Deeply negative = squeeze setup.</p>
+
+      <h2>Cost</h2>
+      <p>$6/month for the DigitalOcean droplet. No API keys, no subscriptions, no premium tiers. At 60-second intervals tracking 5 tokens, the database grows about 50MB per month. The smallest droplet has 25GB of storage. You won't run out of space.</p>
     </div>
     <div class="thesis-sig">
-      <div>Published by <span class="sig-name">tradinghoe</span></div>
+      <div>Published by <span class="sig-name">tradinghoe</span> · April 25, 2026</div>
       <div class="sig-disclaimer">Not financial advice. Do your own research.</div>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    TRADINGHOE · <a href="https://x.com/tradinghoex" target="_blank">𝕏</a> <a href="https://substack.com/@newcoingood" target="_blank">SUBSTACK</a> <a href="https://t.me/YOUR_CHANNEL" target="_blank">TG</a>
+    TRADINGHOE · <a href="https://x.com/tradinghoex" target="_blank">𝕏</a> <a href="https://substack.com/@newcoingood" target="_blank">SUBSTACK</a> <a href="https://t.me/Thresearch" target="_blank">TG</a>
   </div>
 
 </div>
